@@ -1,0 +1,30 @@
+# buscar_vuelos.py
+
+def buscar_vuelos(origen, destino, fecha):
+    """
+    Simula la búsqueda de vuelos.
+    
+    Args:
+    origen (str): Ciudad de origen.
+    destino (str): Ciudad de destino.
+    fecha (str): Fecha de viaje en formato 'YYYY-MM-DD'.
+    
+    Returns:
+    list: Lista de vuelos disponibles.
+    """
+    # Simulación de datos de vuelos
+    vuelos_disponibles = [
+        {'vuelo': 'Vuelo 101', 'origen': 'Madrid', 'destino': 'Barcelona', 'fecha': '2024-10-15'},
+        {'vuelo': 'Vuelo 202', 'origen': 'Madrid', 'destino': 'Londres', 'fecha': '2024-10-16'},
+        {'vuelo': 'Vuelo 303', 'origen': 'Madrid', 'destino': 'Paris', 'fecha': '2024-10-17'},
+    ]
+    
+    # Filtrar vuelos según origen, destino y fecha
+    resultados = [vuelo for vuelo in vuelos_disponibles if vuelo['origen'] == origen and vuelo['destino'] == destino and vuelo['fecha'] == fecha]
+    
+    return resultados
+
+# Ejemplo de uso
+if __name__ == "__main__":
+    vuelos = buscar_vuelos("Madrid", "Barcelona", "2024-10-15")
+    print("Vuelos encontrados:", vuelos)

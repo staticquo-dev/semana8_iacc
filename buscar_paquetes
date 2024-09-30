@@ -1,0 +1,30 @@
+# buscar_paquetes.py
+
+def buscar_paquetes(destino, fecha_inicio, fecha_fin):
+    """
+    Simula la búsqueda de paquetes turísticos.
+    
+    Args:
+    destino (str): Ciudad de destino.
+    fecha_inicio (str): Fecha de inicio en formato 'YYYY-MM-DD'.
+    fecha_fin (str): Fecha de fin en formato 'YYYY-MM-DD'.
+    
+    Returns:
+    list: Lista de paquetes turísticos disponibles.
+    """
+    # Simulación de datos de paquetes turísticos
+    paquetes_disponibles = [
+        {'paquete': 'Paquete a Barcelona', 'destino': 'Barcelona', 'fecha_inicio': '2024-10-15', 'fecha_fin': '2024-10-20'},
+        {'paquete': 'Paquete a Londres', 'destino': 'Londres', 'fecha_inicio': '2024-10-16', 'fecha_fin': '2024-10-22'},
+        {'paquete': 'Paquete a Paris', 'destino': 'Paris', 'fecha_inicio': '2024-10-17', 'fecha_fin': '2024-10-24'},
+    ]
+    
+    # Filtrar paquetes según destino y fechas
+    resultados = [paquete for paquete in paquetes_disponibles if paquete['destino'] == destino and paquete['fecha_inicio'] >= fecha_inicio and paquete['fecha_fin'] <= fecha_fin]
+    
+    return resultados
+
+# Ejemplo de uso
+if __name__ == "__main__":
+    paquetes = buscar_paquetes("Barcelona", "2024-10-15", "2024-10-20")
+    print("Paquetes encontrados:", paquetes)

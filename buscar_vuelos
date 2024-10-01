@@ -14,7 +14,7 @@ def buscar_vuelos(origen, destino, fecha):
     """
     # Simulación de datos de vuelos
     vuelos_disponibles = [
-        {'vuelo': 'Vuelo 101', 'origen': 'Santiago', 'destino': 'Conpceción', 'fecha': '2024-10-15'},
+        {'vuelo': 'Vuelo 101', 'origen': 'chillan', 'destino': 'Conpceción', 'fecha': '2024-10-15'},
         {'vuelo': 'Vuelo 202', 'origen': 'Concepción', 'destino': 'Valdivia', 'fecha': '2024-10-16'},
         {'vuelo': 'Vuelo 303', 'origen': 'Valdivia', 'destino': 'Santiago', 'fecha': '2024-10-17'},
     ]
